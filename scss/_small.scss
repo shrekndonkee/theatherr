@@ -1,0 +1,128 @@
+/* Prevent adjustments of font size after orientation changes.  */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  height: 100%;
+}
+
+/*---- apply a natural box layout model to all elements -------*/
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+ body{
+  height: 100%;
+  font-family: $defaultFont;
+  font-weight: $normalWeight;
+  color: $fontColor;
+  background-color:black ;
+ }
+  
+#mainwrapper h1{
+text-align: center;
+color: white;
+}
+
+
+ #headerwrapper {
+  background-color: white;
+  color: black;
+
+ }
+
+ header{
+  display:flex;
+  align-items: center;
+  padding: 1rem $gutter;
+  gap: 40px;
+  h1{
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: $normalWeight;
+  }
+ }
+
+header a {
+  text-decoration: none;
+  color: gray;
+}
+
+#navwrapper{
+  background-color: rgb(146, 138, 138);
+  
+}
+
+nav{
+  max-width: 75rem;
+  padding: 10px;
+  ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0 $gutter;
+    display: flex;
+    flex-direction: column;
+    
+    
+   
+    li{
+      flex:1;
+     
+    }
+
+  }
+
+  ul li a{
+    display: block;
+    padding: .8rem $gutter;
+  }
+  li.active {background-color: lightgrey;
+  color: white; border-radius: 15px;}
+  a{
+    text-decoration: none;
+    display: block;
+    padding: 0.8rem;
+    color: black;
+    text-align: left;
+    text-decoration: none;
+  &:hover {color: white;}
+  }
+}
+
+section{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  text-align: center;
+  gap: $gutter;
+  padding: 1rem;
+  font-weight: 300;
+  font-size: 10px;
+}
+
+section div{
+  width: 100%;
+  background-color: white;
+  img{
+    width: 100%;
+    height: auto;
+  }
+}
+
+
+
+
+//begin the footer
+
+#footerwrapper {
+  background-color: lightgray;
+}
+
+footer{
+  padding: 0.5rem $gutter;
+  p{
+    margin: 0;
+    font-weight: $lightWeight;
+    text-align: center;
+  }
+}
